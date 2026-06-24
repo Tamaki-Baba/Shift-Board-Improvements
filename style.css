@@ -1,0 +1,354 @@
+body {
+
+  background: #111;
+
+  color: white;
+
+  font-family: sans-serif;
+
+  text-align: center;
+
+  margin: 0;
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+}
+
+/* =======================
+   クイズ画面
+======================= */
+
+#quiz-container {
+
+  width: 90%;
+
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding-top: 10px;
+
+  padding-bottom: 40px;
+}
+
+#question-number {
+
+  font-size: 24px;
+
+  margin-bottom: 10px;
+}
+
+#quiz-image {
+
+  width: auto;
+
+  max-width: 100%;
+
+  max-height: 45vh;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  border: 4px solid white;
+
+  background: black;
+
+  display: block;
+
+  margin: auto;
+}
+
+#question-text {
+
+  font-size: 28px;
+
+  margin: 15px 0;
+}
+
+/* =======================
+   正解表示
+======================= */
+
+#result {
+
+  font-size: 36px;
+
+  font-weight: bold;
+
+  margin: 10px 0 20px 0;
+
+  min-height: 50px;
+}
+
+.correct {
+
+  color: #00ff88;
+}
+
+.wrong {
+
+  color: #ff4d4d;
+}
+
+/* =======================
+   選択肢
+======================= */
+
+#choices {
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+}
+
+/* =======================
+   ボタン共通
+======================= */
+
+.choice-btn,
+.restart-btn,
+#start-button {
+
+  padding: 14px 24px;
+
+  font-size: 22px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  background: #2d5cff;
+
+  color: white;
+
+  transition: 0.2s;
+}
+
+.choice-btn:hover,
+.restart-btn:hover,
+#start-button:hover {
+
+  background: #4d74ff;
+}
+
+.choice-btn:hover {
+
+  transform: scale(1.02);
+}
+
+/* =======================
+   次へボタン
+======================= */
+
+#next-area {
+
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.restart-btn {
+
+  display: block;
+
+  margin: 0 auto;
+}
+
+/* =======================
+   スタート画面
+======================= */
+
+#start-screen {
+
+  width: 100%;
+
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  overflow: hidden;
+}
+
+#title-area {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+}
+
+/* 背景画像 */
+
+#title-character {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+/* タイトル文字 */
+
+#start-title {
+
+  position: absolute;
+
+  top: 15%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+
+  font-size: 70px;
+
+  font-weight: bold;
+
+  color: white;
+
+  text-align: center;
+
+  text-shadow:
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px black;
+}
+
+/* スタートボタン */
+
+#start-button {
+
+  position: absolute;
+
+  bottom: 12%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 32px;
+
+  padding: 20px 60px;
+}
+
+#start-button:hover {
+
+  transform:
+    translateX(-50%)
+    scale(1.05);
+}
+
+/* =======================
+   装飾画像
+======================= */
+
+#corner-kame {
+
+  position: fixed;
+
+  right: 20px;
+
+  top: 100px;
+
+  width: 200px;
+
+  opacity: 0.9;
+
+  pointer-events: none;
+
+  z-index: 999;
+}
+
+#corner-face {
+
+  position: fixed;
+
+  left: 20px;
+
+  top: 20px;
+
+  width: 250px;
+
+  opacity: 0.95;
+
+  pointer-events: none;
+
+  z-index: 999;
+}
+
+/* =======================
+   リザルト画面
+======================= */
+
+#result-screen {
+
+  position: relative;
+
+  width: 100%;
+
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+#result-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+}
+
+#result-overlay {
+
+  position: relative;
+
+  z-index: 1;
+
+  padding-top: 25vh;
+
+  text-align: center;
+
+  color: white;
+
+  text-shadow:
+    0 0 10px black,
+    0 0 20px black,
+    0 0 40px black;
+}
+
+#result-overlay h1 {
+
+  font-size: 70px;
+
+  margin-bottom: 20px;
+}
+
+#result-overlay h2 {
+
+  font-size: 50px;
+
+  margin-bottom: 40px;
+}

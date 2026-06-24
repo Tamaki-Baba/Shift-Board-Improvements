@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>
+    紺野和泉サムネクイズ
+  </title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- スタート画面 -->
+  <div id="start-screen">
+
+ <div id="title-area">
+
+  <img
+    id="title-character"
+    src="images/title.png"
+  >
+
+  <h1 id="start-title">
+    紺野和泉サムネクイズ
+  </h1>
+
+</div>
+
+    <button id="start-button">
+      スタート
+    </button>
+
+  </div>
+
+  <!-- クイズ画面 -->
+  <div id="quiz-container"
+       style="display: none;">
+
+         <img
+  id="corner-kame"
+  src="images/kame.png"
+>
+
+<img
+  id="corner-face"
+  src="images/izumi_face.png"
+>
+
+    <h2 id="question-number"></h2>
+
+    <img id="quiz-image">
+
+    <p id="question-text">
+      ？にはいるのはどれでしょう？
+    </p>
+
+    <div id="result"></div>
+
+    <div id="choices"></div>
+
+    <div id="next-area"></div>
+
+  </div>
+
+  <script src="data/questions.js"></script>
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
